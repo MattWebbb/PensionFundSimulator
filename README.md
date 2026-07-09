@@ -26,7 +26,7 @@ Small changes in assumptions, such as discount rates or life expectancy, can sig
 The simulator follows these stages:
 Synthetic Members -> Salary Projection -> Retirement Pension Calculation -> Longevity Simulation -> Discount Rate Simulation -> Present Value Calculation -> Monte Carlo Simulation -> Risk Analysis
 
-![alt text]([https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Age%20Distribution.png) "Member Age Distribution")
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Age%20Distribution.png "Member Age Distribution")
 ![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Salary%20Distribution.png "Member Salary Distribution")
 
 # Data Generation
