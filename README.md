@@ -61,7 +61,7 @@ Discount rates are simulated using a mean-reverting process.
 # Monte Carlo Simulation
 
 The model runs:
-10,000 simulations
+2000 simulations
 
 Each simulation creates a different possible future based on:
 - Salary uncertainty
