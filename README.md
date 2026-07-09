@@ -26,9 +26,6 @@ Small changes in assumptions, such as discount rates or life expectancy, can sig
 The simulator follows these stages:
 Synthetic Members -> Salary Projection -> Retirement Pension Calculation -> Longevity Simulation -> Discount Rate Simulation -> Present Value Calculation -> Monte Carlo Simulation -> Risk Analysis
 
-![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Age%20Distribution.png "Member Age Distribution")
-![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Salary%20Distribution.png "Member Salary Distribution")
-
 # Data Generation
 
 No real member data is used, instead a synthetic population of 1,000 pension members was created.
@@ -39,18 +36,27 @@ Gender: M/F
 Salary: Normally distributed around £35,000 (Roughly average uk salary)
 Years of service = Randomly generated based on age
 
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Age%20Distribution.png "Member Age Distribution")
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Salary%20Distribution.png "Member Salary Distribution")
+
 # Assumptions
 
 Salary growth is modelled as:
 Salary(t+1) = Salary(t) × (1 + growth + random shock)
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Projected%20Salary%20by%20Age.png "Projected Salary by Age")
 
 Annual pension is determined by:
 Pension = Years of Service × Accrual Rate × Final Salary
 Where accrual rate = 1/60
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Pension%20by%20Years%20of%20Service.png "Pension by Years of Service")
 
 Members retire at age 65.
 Post-retirement lifespan is simulated using a normal distribution where: Mean = 20 years, Standard deviation = 5 years
 Values are restricted between 5 and 40 years.
+
+Discount rates are simulated using a mean-reverting process.
+500 randomly simulated scenarios:
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Discount%20Rate%20Scenarios.png "Discount Rate Scenarios")
 
 # Monte Carlo Simulation
 
@@ -71,6 +77,9 @@ The model calculates:
 - 95th percentile liability
 - Value at Risk
 
+The results from 2000 simulations are shown below, with median and 95th percentile values shown.
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Monte%20Carlo%20Distribution.png "Monte Carlo Distribution")
+
 # Stress Testing
 
 The model evaluates different scenarios:
@@ -80,3 +89,6 @@ Impact: Lower discount rates increase liabilities.
 
 Scenario: Members live two years longer.
 Impact: Additional pension payments increase liabilities.
+
+Comparison between scenarions:
+![alt text](https://github.com/MattWebbb/PensionFundSimulator/blob/main/Screenshots/Scenario%20Analysis.png "Scenario Analysis")
