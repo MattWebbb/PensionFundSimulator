@@ -1,4 +1,4 @@
-# PensionFundSimulator
+# Pension Fund Simulator
 
 A stochastic simulation model to estimate the future liabilities of a defined benefit pension scheme.
 The model uses Monte Carlo simulation to generate thousands of possible future economic scenarios and calculates the present value of pension obligations under uncertainty.
